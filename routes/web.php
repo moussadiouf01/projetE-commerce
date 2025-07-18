@@ -17,4 +17,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('login', [AuthController::class, 'login'])->name('login.submit');
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('dashboard', [AuthController::class, 'dashboard'])->middleware('auth:admin')->name('dashboard');
+    Route::resource('products', \App\Http\Controllers\Admin\ProductController::class);
 });
