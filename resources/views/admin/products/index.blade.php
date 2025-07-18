@@ -27,7 +27,7 @@
                 <tr>
                     <td>{{ $product->id }}</td>
                     <td>{{ $product->name }}</td>
-                    <td>{{ $product->price }} €</td>
+                    <td>{{ $product->price }} F CFA</td>
                     <td>{{ $product->stock }}</td>
                     <td>
                         @if($product->image)

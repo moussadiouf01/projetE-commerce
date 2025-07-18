@@ -14,7 +14,7 @@
             <textarea name="description" id="description" class="form-control"></textarea>
         </div>
         <div class="mb-3">
-            <label for="price" class="form-label">Prix (€)</label>
+            <label for="price" class="form-label">Prix (F CFA)</label>
             <input type="number" name="price" id="price" class="form-control" step="0.01" required>
         </div>
         <div class="mb-3">
