@@ -18,6 +18,7 @@
                 <th>Nom</th>
                 <th>Prix</th>
                 <th>Stock</th>
+                <th>Catégorie</th>
                 <th>Image</th>
                 <th>Actions</th>
             </tr>
@@ -29,6 +30,7 @@
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->price }} F CFA</td>
                     <td>{{ $product->stock }}</td>
+                    <td>{{ $product->category ? $product->category->name : '-' }}</td>
                     <td>
                         @if($product->image)
                             <img src="{{ asset('storage/' . $product->image) }}" alt="Image" width="50">
