@@ -21,6 +21,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
+        \App\Models\Admin::updateOrCreate([
+            'email' => 'dioufmoussa812@gmail.com',
+        ], [
+            'name' => 'Moussa Diouf',
+            'password' => bcrypt('Papemoussa01'),
+        ]);
+
         $this->call([
             OrderSeeder::class,
         ]);

@@ -8,8 +8,21 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container d-flex justify-content-between align-items-center">
             <a class="navbar-brand" href="#">Admin E-commerce</a>
+            @auth('admin')
+            <div class="position-relative">
+                <a href="{{ route('admin.notifications') }}" class="btn position-relative">
+                    <span class="fs-4">🔔</span>
+                    @php $count = auth('admin')->user()->unreadNotifications()->count(); @endphp
+                    @if($count > 0)
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{ $count }}
+                        </span>
+                    @endif
+                </a>
+            </div>
+            @endauth
         </div>
     </nav>
     <main>

@@ -27,4 +27,9 @@ class Product extends Model
     {
         return $this->hasMany(\App\Models\OrderItem::class);
     }
+
+    public function getPriceFormattedAttribute()
+    {
+        return number_format($this->price, 2, ',', ' ') . ' F CFA';
+    }
 }

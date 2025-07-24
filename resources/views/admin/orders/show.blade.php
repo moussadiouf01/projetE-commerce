@@ -8,6 +8,7 @@
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h2 class="mb-0">Commande #{{ $order->id }}</h2>
                     <div>
+                        <a href="{{ route('admin.orders.invoice', $order) }}" class="btn btn-success me-2" target="_blank">Télécharger la facture PDF</a>
                         <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary me-2">Tableau de bord</a>
                         <a href="{{ route('admin.orders.index') }}" class="btn btn-secondary">Retour</a>
                     </div>

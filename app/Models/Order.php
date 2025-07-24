@@ -24,7 +24,7 @@ class Order extends Model
 
     public function getTotalAttribute($value)
     {
-        return number_format($value, 2, ',', ' ') . ' €';
+        return number_format($value, 2, ',', ' ') . ' F CFA';
     }
 
     public function getStatusBadgeAttribute()
