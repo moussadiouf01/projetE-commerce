@@ -8,7 +8,8 @@
         </div>
     @endif
     <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1>Liste des catégories</h1>
+        <h2 class="mb-0">Liste des catégories</h2>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary">Retour au tableau de bord</a>
         <a href="{{ route('admin.categories.create') }}" class="btn btn-primary">Ajouter une catégorie</a>
     </div>
     <table class="table table-bordered">

@@ -13,11 +13,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
+        // Créer l'utilisateur de test seulement s'il n'existe pas déjà
+        User::firstOrCreate([
             'email' => 'test@example.com',
+        ], [
+            'name' => 'Test User',
+            'password' => bcrypt('password'),
+        ]);
+
+        $this->call([
+            OrderSeeder::class,
         ]);
     }
 }
